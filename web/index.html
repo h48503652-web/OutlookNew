@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>פתיחת טיוטות ב-Outlook</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <style>
+      body { max-width: 900px; margin: 2rem auto; }
+      .muted { color: #6b7280; font-size: .9rem; }
+      .error { color: #b91c1c; }
+      .success { color: #065f46; }
+      textarea { min-height: 160px; }
+      footer { margin-top: 2rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2>📩 פתיחת טיוטות מייל ב-Outlook</h2>
+      <p class="muted">מלאי את הפרטים. בלחיצה על "פתח טיוטות" ייפתחו טיוטות מקומיות ב-Outlook (אחת לכל נמען) עם הקובץ מצורף.</p>
+
+      <form id="draftForm">
+        <label>
+          נושא המייל
+          <input type="text" id="subject" name="subject" placeholder="נושא" required />
+        </label>
+
+        <label>
+          כתובות נמען
+          <input type="text" id="recipients" name="recipients" placeholder="example@company.com; second@company.com" required />
+          <small class="muted">הפרידי בין נמענים בפסיק "," או נקודה-פסיק ";"</small>
+        </label>
+
+        <label>
+          גוף ההודעה
+          <textarea id="body" name="body" placeholder="הודעה למעסיק..." required></textarea>
+        </label>
+
+        <label>
+          קובץ קורות חיים (PDF/Word)
+          <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx" required />
+        </label>
+
+        <div>
+          <button type="submit">פתח טיוטות</button>
+          <button type="reset" class="secondary">נקה</button>
+        </div>
+      </form>
+
+      <p id="status" class="muted" aria-live="polite"></p>
+
+      <details>
+        <summary>עזרה</summary>
+        <ul>
+          <li>יש להפעיל שירות מקומי ב-Windows שמאזין ב-<code>http://127.0.0.1:5005</code>.</li>
+          <li>השירות פותח טיוטות Outlook באמצעות COM, ואינו שולח מיילים.</li>
+          <li>אבטחה: הקובץ נשלח רק ל-<code>localhost</code> ואינו נשמר קבוע.</li>
+        </ul>
+      </details>
+    </main>
+
+    <footer class="muted">© טיוטות Outlook מקומיות</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
