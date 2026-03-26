@@ -59,3 +59,23 @@ pip install -r requirements.txt
 
 # הרצת השרת המקומי
 python app.py
+2. הרצת הממשק
+פשוט פתחי את הקובץ web/index.html בדפדפן (או השתמשי בתוסף Live Server ב-VS Code).
+
+🔒 אבטחה ופרטיות
+Local Only: ה-Helper מאזין אך ורק לכתובת ה-Internal IP (127.0.0.1), מה שמונע מכל גורם חיצוני ברשת לגשת לשירות.
+
+Auto-Cleanup: קבצים זמניים המועלים לטובת הצירוף נמחקים מהדיסק מיד עם פתיחת הטיוטה ב-Outlook.
+
+📈 שאיפות לעתיד (Roadmap)
+[ ] תמיכה בתבניות HTML עשירות (Rich Text/Signatures).
+
+[ ] הוספת תמיכה בשדות CC ו-BCC.
+
+[ ] אריזה לקובץ .exe פשוט (באמצעות PyInstaller) להרצה ללא צורך בהתקנת Python.
+
+[ ] הוספת אימות API Key מקומי לאבטחה נוספת.
+
+פותח על ידי [השם שלך]
+
+"Bridging the gap between Web and Desktop, one draft at a time."
